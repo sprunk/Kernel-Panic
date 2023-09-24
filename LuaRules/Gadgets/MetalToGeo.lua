@@ -69,7 +69,7 @@ function gadget:Initialize()
 		local minmetal, maxmetal = nil, nil
 		for x = 16,Game.mapSizeX,32 do
 			for z = 16,Game.mapSizeZ,32 do
-				local _,m = Spring.GetGroundInfo(x,z)
+				local _,_,m = Spring.GetGroundInfo(x,z)
 				if not minmetal or m<minmetal then
 					minmetal = m
 				end
@@ -90,7 +90,7 @@ function gadget:Initialize()
 		else
 			for x = 16,Game.mapSizeX,32 do
 				for z = 16,Game.mapSizeZ,32 do
-					local _,m = Spring.GetGroundInfo(x,z)
+					local _,_,m = Spring.GetGroundInfo(x,z)
 					if m >= mediummetal then
 						local newSpot=true
 						for _,g in ipairs(GeoSpots) do
