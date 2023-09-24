@@ -91,9 +91,7 @@ local sidePicsWO		= {} -- loaded in SetSidePics function
 -- Fonts
 --------------------------------------------------------------------------------
 
-if not fontHandler then
-	include "LuaUI/modfonts.lua"
-end
+local fontHandler = VFS.Include("LuaUI/modfonts.lua", nil, VFS.BASE)
 
 local font					= "LuaUI/Fonts/FreeSansBold_14"
 local fontWOutline		= "LuaUI/Fonts/FreeSansBoldWOutline_14" -- White outline for font
