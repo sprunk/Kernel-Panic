@@ -56,7 +56,7 @@ else
 
 	function gadget:Initialize()
 		-- Since Spring 0.81.0 unit texture alpha transparency is used even without AdvUnitShading
-		--if(tonumber(Spring.GetConfigInt("AdvUnitShading"))==0) then
+		--if(tonumber(Spring.GetConfigInt("AdvUnitShading", 0))==0) then
 		--	gadgetHandler:RemoveGadget()
 		--	return
 		--else

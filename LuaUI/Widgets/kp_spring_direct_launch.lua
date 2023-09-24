@@ -1452,7 +1452,7 @@ function widget:Initialize()
 	FillModSpecific()
 	SDLG=GenerateSkirmish()
 	--SDLG=GenerateSkirmish(FindMap())
-	if tonumber(Spring.GetConfigInt("snd_volmaster"))==1 then
+	if tonumber(Spring.GetConfigInt("snd_volmaster", 0))==1 then
 		Spring.SetConfigInt("snd_volmaster",100)
 	end
 	if Spring.GetModOptions()["ons"]==nil then
