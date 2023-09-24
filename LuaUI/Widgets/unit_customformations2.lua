@@ -494,9 +494,13 @@ function widget:MouseRelease(mx, my, button)
 	
 	--// single click? (no line drawn)
 	if (fNodeCount == 1) then
-		
+		local node = fNodes[1]
+		node[4] = nil
+		node[5] = nil
+		node[6] = nil
+
 		-- Check if other widgets want to handle it
-		local retval = widgetHandler:CommandNotify(cmdTag, fNodes[1], keyState2) or false
+		local retval = widgetHandler:CommandNotify(cmdTag, node, keyState2) or false
 		
 		-- Don't do it if another widget is handling it
 		if retval then
@@ -504,7 +508,7 @@ function widget:MouseRelease(mx, my, button)
 			return -1
 		end
 		
-		spGiveOrder(cmdTag, fNodes[1], keyState)
+		spGiveOrder(cmdTag, node, keyState)
 		ClearFNodes()
 		
 		if shift and (activeCmdIndex > -1) then
