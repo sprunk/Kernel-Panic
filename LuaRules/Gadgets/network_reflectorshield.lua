@@ -147,7 +147,7 @@ function gadget:DrawWorld()
 	gl.Culling(GL.BACK)
 	gl.PolygonOffset(-10,-10)
 
-	for u,_ in spairs(SYNCED.protected) do
+	for u,_ in pairs(SYNCED.protected) do
 		local x,y,z = Spring.GetUnitPosition(u)
 		if x then
 			local los =  Spring.GetPositionLosState(x,y,z, ateam)

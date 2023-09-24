@@ -73,7 +73,7 @@ function gadget:DrawWorld()
 	gl.Texture("bitmaps/kpsfx/shine.tga")
 	local _,_,_,_,_,ateam = Spring.GetTeamInfo(Spring.GetLocalTeamID())
 	local _,specView = Spring.GetSpectatingState()
-	for u,t in spairs(SYNCED.THconstructions) do
+	for u,t in pairs(SYNCED.THconstructions) do
 		local x,y,z=Spring.GetUnitBasePosition(u)
 		local _,los,_,_ =  Spring.GetPositionLosState(x,y,z, ateam)
 		if Spring.IsUnitVisible(u, t.radius) and (los or specView) then

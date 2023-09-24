@@ -141,7 +141,7 @@ arcDrawFunc = {
 function gadget:DrawWorld()
 	local _,_,_,_,_,ateam = Spring.GetTeamInfo(Spring.GetLocalTeamID())
 	local _,specView = Spring.GetSpectatingState()
-	for _,a in spairs(SYNCED.arcList) do
+	for _,a in pairs(SYNCED.arcList) do
 		local _,alos1,_ = Spring.GetPositionLosState(a.x1,a.y1,a.z1, ateam)
 		local _,alos2,_ = Spring.GetPositionLosState(a.x2,a.y2,a.z2, ateam)
 		if specView or alos1 or alos2 then

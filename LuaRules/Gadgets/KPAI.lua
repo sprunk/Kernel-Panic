@@ -1343,7 +1343,7 @@ function gadget:DrawWorldPreUnit()
 		if Spring.GetModOptions()["ons"] and Spring.GetModOptions()["ons"]~="0" then
 			size=96
 		end
-		for _,p in spairs(SYNCED.teamData[team].positions) do
+		for _,p in pairs(SYNCED.teamData[team].positions) do
 			if p.state == STATE_EMPTY then
 				gl.Color(unpack(EmptyColor))
 			elseif p.state == STATE_OWN then

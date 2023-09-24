@@ -1540,9 +1540,9 @@ else
 function gadget:DrawWorld()
 	if SYNCED.teamData then
 		--Draw the wave warnings
-		for t,d in spairs(SYNCED.teamData) do
+		for t,d in pairs(SYNCED.teamData) do
 			if d.nextWave then
-				for target,wave in spairs(d.nextWave) do
+				for target,wave in pairs(d.nextWave) do
 					gl.PushMatrix()
 					gl.Translate(wave.x,wave.y + 50, wave.z)
 					gl.Billboard()
@@ -1559,7 +1559,7 @@ function gadget:DrawScreen(vsx,vsy)
 		local lowestWave = nil
 		local shortAIA= math.floor(SYNCED.aiAggression)
 		gl.Text("Intrusion Alert Level: "..shortAIA,300,vsy - 20,12,"o")
-		for _,d in spairs(SYNCED.teamData) do
+		for _,d in pairs(SYNCED.teamData) do
 			--Find the next wave that will arrive
 			if d.nextWave and (not lowestWave or d.waveTime < lowestWave) then
 				lowestWave=d.waveTime

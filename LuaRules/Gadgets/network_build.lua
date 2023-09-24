@@ -54,7 +54,7 @@ else
 		gl.Culling(GL.BACK)
 		gl.PolygonOffset(-2,-2)
 		gl.Texture(":na:unittextures/network_buildeffect.tga")
-		for u,d in spairs(SYNCED.constructions) do
+		for u,d in pairs(SYNCED.constructions) do
 			Spring.UnitRendering.SetUnitLuaDraw(u,true)
 			local x,y,z = Spring.GetUnitPosition(u)
 			local _,los,_,_ =  Spring.GetPositionLosState(x,y,z, ateam)

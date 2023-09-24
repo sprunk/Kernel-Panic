@@ -4,7 +4,6 @@
 -- quantum: and have no gaps
 -- quantum: use pairs() instead
 -- quantum: pairs and ipairs are both standard lua functions
--- quantum: spairs is some wierd spring only thing :P
 
 
 function gadget:GetInfo()
@@ -805,7 +804,7 @@ end
 -- Draw Geo Webs
 local function DrawLinkPaths()
 	if SYNCED.ONS and SYNCED.ONS.LinkPaths then
-		for _,WebThread in sipairs(SYNCED.ONS.LinkPaths) do
+		for _,WebThread in ipairs(SYNCED.ONS.LinkPaths) do
 			DrawGroundHuggingStripe(1,0,1,1,WebThread.x1,WebThread.z1,WebThread.x2,WebThread.z2,32,8)
 			DrawGroundHuggingSquare(1,0,1,1,WebThread.x1,WebThread.z1,64,8)
 			DrawGroundHuggingSquare(1,0,1,1,WebThread.x2,WebThread.z2,64,8)
@@ -1019,7 +1018,7 @@ end
 -- Draw Link Beams
 local function DrawLinkBeams()
 	if SYNCED.ONS and SYNCED.ONS.LinkBeams then
-		for _,Beam in sipairs(SYNCED.ONS.LinkBeams) do
+		for _,Beam in ipairs(SYNCED.ONS.LinkBeams) do
 			DrawSingleLinkBeam(Beam)
 		end
 	end

@@ -400,7 +400,7 @@ local DrawFrame = 0
 -- Draw the lost souls
 function gadget:DrawWorldPreUnit()
 	if SYNCED.SaveOurSouls then
-		for _,s in sipairs(SYNCED.SaveOurSouls.Souls) do
+		for _,s in ipairs(SYNCED.SaveOurSouls.Souls) do
 			local tc={Spring.GetTeamColor(s.t)}
 			gl.Color(tc[1],tc[2],tc[3],s.t==Spring.GetLocalTeamID() and 1 or 0.2)
 			if s.a<=5 then -- Young souls
