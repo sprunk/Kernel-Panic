@@ -204,6 +204,13 @@ else
 		end
 	--end
 
+	-- Workaround Hex Farm lacking void ground.
+	-- It used to work on 105, but I am unsure how
+	-- because there is no voidGround set anywhere
+	-- and maps aren't supposed to be default void
+	if Game.mapName == "Hex Farm 8" then
+		Spring.SetMapRenderingParams({ voidGround = true })
+	end
 end
 
 
