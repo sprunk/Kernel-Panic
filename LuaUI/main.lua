@@ -59,7 +59,13 @@ VFS.Include("LuaHandler/Utilities/utils.lua", nil, VFS.DEF_MODE)
 --// the addon handler
 include "LuaHandler/handler.lua"
 
-include "LuaUI/main.lua"
+-- KP used to include `LuaUI/main.lua` here as `VFS.RAW`.
+-- This would let players override the default loose file that
+-- comes with engine installations, without recursing back here.
+-- As of engine 2025.06.03 that file is broken and crashes.
+-- `loose_default_main.lua` is a fixed copy of that file.
+-- Might want to revert when engine gets fixed.
+VFS.Include("LuaUI/loose_default_main.lua", nil, VFS.RAW_FIRST)
 
 --// print Lua & LuaUI version
 Spring.Log(LUA_NAME, "info", LUA_VERSION .. " (" .. _VERSION .. ")")
