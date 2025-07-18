@@ -78,7 +78,6 @@
 [DOS_Beam]
 	{
 	name=/.;
-	id=222;
 	rendertype=1;
 	lineofsight=1;
 	beamlaser=1;
@@ -394,7 +393,6 @@
 	//Texture2=firsttrailtex;
 	soundstart=obeliskfire;
 	soundhit=obeliskhit;
-	id=234;
 
 	turret=1;
 	range=2000;

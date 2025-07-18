@@ -569,7 +569,6 @@
 [SigTerm]
 	{
 	name=SIGTERM;
-	id=247;
 
 	model=sigterm.s3o;
 
@@ -616,7 +615,6 @@
 	Texture2=firetrail;
 	soundstart=pointerfire;
 	soundhit=pointerhit;
-	id=538;
 
 	turret=1;
 	range=1400;
